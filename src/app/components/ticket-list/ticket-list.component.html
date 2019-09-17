@@ -1,0 +1,14 @@
+<h3 class="pb-3">Sold Tickets</h3>
+<div class="row mx-lg-n1" *ngIf="tickets.length > 0; else noTickets">
+  <div class="col-sm-6 p-lg-1" *ngFor="let ticket of tickets">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">{{ ticket.gambleNumber }}</h5>
+        <p class="card-text">{{ ticket.owner }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+<ng-template #noTickets>
+  <p>No tickets sold yet.</p>
+</ng-template>

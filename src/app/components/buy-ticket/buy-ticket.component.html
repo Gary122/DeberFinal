@@ -1,0 +1,9 @@
+<h3 class="pb-3">Buy tickets</h3>
+<form autocomplete="off">
+  <div class="form-group">
+    <label for="gambleNumber">Number to gamble on [1, 100]:</label>
+    <input #gambleNumberInput type="number" class="form-control" id="gambleNumber" placeholder="Number" min="1" max="100">
+  </div>
+  <button (click)="buyTicket(gambleNumberInput.value)" type="submit" class="btn btn-primary">Buy ticket</button>
+  <small id="submitNote" class="form-text text-muted">1 ticket costs {{ this.parent.ticketPrice }} ether.</small>
+</form>

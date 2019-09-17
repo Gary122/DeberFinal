@@ -1,0 +1,13 @@
+<div class="container">
+  <app-header></app-header>
+  <app-alert class="d-block my-4"></app-alert>
+  <div class="row" *ngIf="connected">
+    <div class="col-md-8">
+      <app-ticket-list></app-ticket-list>
+    </div>
+    <div class="col-md-4">
+      <app-buy-ticket *ngIf="this.lotteryState == lotteryStateEnum.Open"></app-buy-ticket>
+      <app-lottery-info class="d-block mt-4"></app-lottery-info>
+    </div>
+  </div>
+</div>

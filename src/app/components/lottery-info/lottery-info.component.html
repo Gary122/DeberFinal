@@ -1,0 +1,11 @@
+<h3>Lottery info</h3>
+<dl class="row mt-3">
+  <dt class="col-6">Lottery state</dt>
+  <dd class="col-6 text-right">{{ lotteryStateEnum[this.parent.lotteryState] }}</dd>
+  <dt class="col-6">Chairman</dt>
+  <dd class="col-6 text-right">{{ getDisplayableStringFromAddress(this.parent.chairmanAddress) }}</dd>
+  <dt class="col-6">Ticket price</dt>
+  <dd class="col-6 text-right">{{ this.parent.ticketPrice }} ether</dd>
+  <dt class="col-6">Current jackpot</dt>
+  <dd class="col-6 text-right">{{ this.parent.jackpot }} ether</dd>
+</dl>
